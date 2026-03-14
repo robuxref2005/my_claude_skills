@@ -13,5 +13,7 @@ The folders in this repo only include the skills I created personally. However, 
 - [Agent Skills marketplace](https://skillsmp.com/)
 - [Collection of R skills by Isabella Velasquez](https://rworks.dev/posts/claude-skills-for-r-users/)
 - [Academic proofreader by Peter Nencka](https://github.com/peternka/academic_proofreader)
+- [K Dense AI Claude scientific skills](https://github.com/K-Dense-AI/claude-scientific-skills)
+- [Behi Secc Awesome Claude skills](https://github.com/BehiSecc/awesome-claude-skills)
 
 TBC...
