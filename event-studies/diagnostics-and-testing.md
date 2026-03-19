@@ -171,7 +171,7 @@ Randomly reassign treatment across units and re-estimate. Repeat many times to b
 a distribution under the null of no effect:
 
 ```r
-set.seed(123)
+set.seed(58104)
 n_perms <- 500
 perm_estimates <- numeric(n_perms)
 

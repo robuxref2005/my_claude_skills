@@ -121,9 +121,8 @@ es_coefs <- dplyr::bind_rows(es_coefs, ref_row)
 ggplot(es_coefs, aes(x = rel_time, y = estimate)) +
   geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
   geom_vline(xintercept = -0.5, linetype = "dashed", color = "gray50") +
-  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = 0.2, fill = "steelblue") +
+  geom_errorbar(aes(ymin = conf.low, ymax = conf.high), width = 0.2, color = "steelblue") +
   geom_point(color = "steelblue", size = 2) +
-  geom_line(color = "steelblue", linewidth = 0.5) +
   labs(
     x = "Periods Relative to Treatment",
     y = "Estimated Effect on Outcome",
@@ -190,7 +189,7 @@ It can produce misleading estimates when:
 - Already-treated units serve as "controls" for later-treated units
 - Negative weights emerge in the TWFE estimand (see Bacon decomposition in diagnostics)
 
-When these concerns apply, move to the modern extensions (see `references/modern-extensions.md`).
+When these concerns apply, move to the modern extensions (see `modern-extensions.md`).
 
 ## Simulated Example for Testing
 
@@ -201,7 +200,7 @@ library(fixest)
 library(ggplot2)
 library(dplyr)
 
-set.seed(42)
+set.seed(90841)
 
 # Simulate panel data
 n_units <- 200

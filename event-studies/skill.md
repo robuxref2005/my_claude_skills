@@ -34,12 +34,12 @@ Use this skill when the user wants to:
 Before writing any code, determine the user's situation:
 
 1. **Is treatment timing the same for all treated units?**
-   - Yes → Traditional TWFE event study is fine. See `references/traditional-event-study.md`
+   - Yes → Traditional TWFE event study is fine. See `traditional-event-study.md`
    - No (staggered) → Go to step 2.
 
 2. **Is there reason to expect heterogeneous treatment effects across cohorts or over time?**
    - No strong reason → Traditional TWFE may still be OK, but consider robust alternatives.
-   - Yes or unsure → Use a robust estimator. See `references/modern-extensions.md`
+   - Yes or unsure → Use a robust estimator. See `modern-extensions.md`
 
 3. **What is the user's goal?**
    - Quick visualization of pre-trends → Traditional approach, fast and familiar.
@@ -78,15 +78,15 @@ For any event study request, follow this general workflow:
 
 Read these as needed based on the user's situation:
 
-- `references/traditional-event-study.md` - Traditional TWFE event study with `fixest`.
+- `traditional-event-study.md` - Traditional TWFE event study with `fixest`.
   Read this for any event study request. It covers the baseline approach, plotting,
   and the assumptions behind it.
 
-- `references/modern-extensions.md` - Modern robust estimators for staggered designs.
+- `modern-extensions.md` - Modern robust estimators for staggered designs.
   Read this when treatment timing varies across units or when the user asks about
   heterogeneous treatment effects, or any of the newer DiD methods.
 
-- `references/diagnostics-and-testing.md` - Pre-trend testing, placebo checks,
+- `diagnostics-and-testing.md` - Pre-trend testing, placebo checks,
   Bacon decomposition, sensitivity analysis. Read this when the user wants to
   validate their design or when you spot potential issues.
 

@@ -122,9 +122,8 @@ cs_df <- data.frame(
 ggplot(cs_df, aes(x = rel_time, y = estimate)) +
   geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
   geom_vline(xintercept = -0.5, linetype = "dashed", color = "gray50") +
-  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = 0.2, fill = "#E69F00") +
+  geom_errorbar(aes(ymin = conf.low, ymax = conf.high), width = 0.2, color = "#E69F00") +
   geom_point(color = "#E69F00", size = 2) +
-  geom_line(color = "#E69F00", linewidth = 0.5) +
   labs(
     x = "Periods Relative to Treatment",
     y = "ATT",
@@ -231,9 +230,8 @@ sa_coefs <- bind_rows(
 ggplot(sa_coefs, aes(x = rel_time, y = estimate)) +
   geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
   geom_vline(xintercept = -0.5, linetype = "dashed", color = "gray50") +
-  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = 0.2, fill = "#56B4E9") +
+  geom_errorbar(aes(ymin = conf.low, ymax = conf.high), width = 0.2, color = "#56B4E9") +
   geom_point(color = "#56B4E9", size = 2) +
-  geom_line(color = "#56B4E9", linewidth = 0.5) +
   labs(
     x = "Periods Relative to Treatment",
     y = "Estimated Effect",
@@ -350,9 +348,8 @@ dcdh_df <- data.frame(
 ggplot(dcdh_df, aes(x = rel_time, y = estimate)) +
   geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
   geom_vline(xintercept = -0.5, linetype = "dashed", color = "gray50") +
-  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = 0.2, fill = "#009E73") +
+  geom_errorbar(aes(ymin = conf.low, ymax = conf.high), width = 0.2, color = "#009E73") +
   geom_point(color = "#009E73", size = 2) +
-  geom_line(color = "#009E73", linewidth = 0.5) +
   labs(
     x = "Periods Relative to Treatment",
     y = "Estimated Effect",
@@ -400,9 +397,8 @@ bjs_model |>
   ggplot(aes(x = term, y = estimate, ymin = conf.low, ymax = conf.high)) +
   geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
   geom_vline(xintercept = -0.5, linetype = "dashed", color = "gray50") +
-  geom_ribbon(alpha = 0.2, fill = "#CC79A7") +
+  geom_errorbar(aes(ymin = conf.low, ymax = conf.high), width = 0.2, color = "#CC79A7") +
   geom_point(color = "#CC79A7", size = 2) +
-  geom_line(color = "#CC79A7", linewidth = 0.5) +
   labs(
     x = "Periods Relative to Treatment",
     y = "Estimated Effect",
@@ -460,20 +456,18 @@ colors <- c(
   "Sun & Abraham" = "#56B4E9"
 )
 
-ggplot(all_estimates, aes(x = rel_time, y = estimate, color = estimator, fill = estimator)) +
+ggplot(all_estimates, aes(x = rel_time, y = estimate, color = estimator)) +
   geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
   geom_vline(xintercept = -0.5, linetype = "dashed", color = "gray50") +
-  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = 0.1, color = NA) +
+  geom_errorbar(aes(ymin = conf.low, ymax = conf.high), width = 0.2,
+                position = position_dodge(width = 0.3)) +
   geom_point(size = 2, position = position_dodge(width = 0.3)) +
-  geom_line(linewidth = 0.5, position = position_dodge(width = 0.3)) +
   scale_color_manual(values = colors) +
-  scale_fill_manual(values = colors) +
   labs(
     x = "Periods Relative to Treatment",
     y = "Estimated Effect",
     title = "Event Study: Comparing Estimators",
-    color = "Estimator",
-    fill = "Estimator"
+    color = "Estimator"
   ) +
   theme_minimal(base_size = 13) +
   theme(
@@ -486,9 +480,8 @@ ggplot(all_estimates, aes(x = rel_time, y = estimate, color = estimator, fill = 
 ggplot(all_estimates, aes(x = rel_time, y = estimate)) +
   geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
   geom_vline(xintercept = -0.5, linetype = "dashed", color = "gray50") +
-  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = 0.2, fill = "steelblue") +
+  geom_errorbar(aes(ymin = conf.low, ymax = conf.high), width = 0.2, color = "steelblue") +
   geom_point(color = "steelblue", size = 1.5) +
-  geom_line(color = "steelblue", linewidth = 0.4) +
   facet_wrap(~estimator, ncol = 1) +
   labs(
     x = "Periods Relative to Treatment",
